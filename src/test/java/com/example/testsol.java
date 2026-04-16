@@ -7,7 +7,7 @@ public class testsol {
 
     @Test
     public void testAdd() {
-        Solution s = new Solution();
+        solution s = new solution();
         assertEquals(5, s.add(2, 3));
     }
 
