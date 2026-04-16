@@ -1,0 +1,27 @@
+pipeline scipt
+pipeline
+{
+    agent any
+    tools {
+        jdk 'jdk_21'
+        maven 'MAVEN'
+    }
+
+    stages
+    {
+        stage('git clone')
+        {
+            steps
+            {
+                git branch: 'main',url: 'https://github.com/sreethanushya/maven_demo.git'
+            }
+        }
+        stage('build')
+        {
+            steps
+            {
+                bat 'mvn clean install'
+            }
+        }
+    }
+}
