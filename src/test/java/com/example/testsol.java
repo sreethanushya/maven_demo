@@ -13,7 +13,7 @@ public class testsol {
 
     @Test
     public void testDivideByZero() {
-        Solution s = new Solution();
+        solution s = new solution();
         assertThrows(IllegalArgumentException.class, () -> {
             s.div(10, 0);
         });
